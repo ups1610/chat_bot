@@ -1,0 +1,175 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+- intent: out_of_scope
+  examples: |
+    - Abuse me
+    - Who is the President
+    - Will you marry me
+    - Do you have Girlfriend / boyfriend
+    - 2+2
+    - 4*4
+    - Go to hell
+    - I want to order food
+
+- intent: bot_name
+  examples: |
+    - What is your name
+    - name what
+    - who are you
+    - introduce yourself
+    - call who you are
+    - name your please
+    - developed by whom
+    - who create you
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: user_name
+  examples: |
+    - my name is [Pocket Guide]{"entity":"name","value":"PocketGuide"}
+    - my name is [Upendra]{"entity":"name","value":"Upendra"}
+    - my name is [deepak singh]{"entity":"name"}
+    - [PocketGuide]{"entity":"name","value":"PocketGuide"} is my name
+    - [PocketGuide]{"entity":"name","value":"PocketGuide"} this side
+    - [PocketGuide]{"entity":"name","value":"Pockket Guide"}
+    - [AlphaBetaGama]{"entity":"name","value":"AlphaBetaGama"}
+    - I am [upendra]{"entity":"name","value":"upendra"}
+    - people call me [upendra]{"entity":"name","value":"upendra"}
+
+- intent: user_departure
+  examples: |
+    - I want to travel from [Dehradun]{"entity":"dep","value":"Dehradun"}
+    - departure from [Jaipur]{"entity":"dep","value":"Jaipur"}
+    - Going from [Haldwani]{"entity":"dep"}
+    - [Punjab]{"entity":"dep","value":"Departure"} is a city of departure
+    - [Kashmir]{"entity":"dep","value":"Pocket Guide"} city
+    - [banglore]{"entity":"dep","value":"banglore"}
+    - I am in [dwarika]{"entity":"dep","value":"dwarika"}
+    - city is [mumbai]{"entity":"dep","value":"mumbai"} 
+
+- intent: user_arival
+  examples: |
+    - I want to travel to [jaipur]{"entity":"arive","value":"jaipur"}
+    - arrival to [jammu&kashmir]{"entity":"arive","value":"jammu&kashmir"}
+    - Going to [mussoorie]{"entity":"arive"}
+    - [jalandhar]{"entity":"arive"}is a city of jalandhar
+    - [Goa]{"entity":"arive","value":"Pocket Goa"}is a arrival city
+    - [agra]{"entity":"arive","value":"agra"}
+    - I am in [delhi]{"entity":"arive","value":"delhi"}
+    - city is [kerla]{"entity":"arive","value":"kerla"} 
+
+- intent: user_days
+  examples: |
+    - [10]{"entity":"number"} days
+    - [5]{"entity":"number"}
+    - No. of days is [25]{"entity":"number"}
+    - [4]{"entity":"number"}
+    - [6]{"entity":"number"}
+    - Nearly about [6]{"entity":"number"} days
+    - approximately [19]{"entity":"number"}
+    - [1]{"entity":"number","values":"1"}
+    - [5]{"entity":"number","values":"5"}
+    - [6]{"entity":"number","values":"6"}
+    - [3]{"entity":"number","values":"3"}
+    - [2]{"entity":"number","values":"2"}
+    - [9]{"entity":"number","values":"7"}
+    - [7]{"entity":"number","values":"7"}
+
+- intent: user_budget
+  examples: |
+    - I want to spend [10000]{"entity":"amt"} days
+    - [1000]{"entity":"amt"}
+    - Amount is [5000]{"entity":"amt"}
+    - [6000]{"entity":"amt"} is a budget
+    - budget is about [2000]{"entity":"amt"}
+    - Nearly about [3000]{"entity":"amt"} days
+    - approximately [10000]{"entity":"amt"}  
+    - my budget is [1200]{"entity":"amt"}                  
+
+
+    

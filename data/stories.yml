@@ -1,0 +1,72 @@
+version: "3.1"
+
+stories:
+
+- story: bot flow
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome 
+  - intent: affirm
+  - action: utter_name
+  - intent: user_name
+    entities:
+      - name: "upendra"
+  - slot_was_set:
+      - name: "upendra"
+  - action: utter_user_dep
+  - intent: user_departure
+    entities:
+      - dep: "dehradun"
+  - slot_was_set:
+      - dep: "dehradun"  
+  - action: utter_user_arival
+  - intent: user_arival
+    entities:
+      - arive: "dehradun"
+  - slot_was_set:
+      - arive: "dehradun"
+  - action: utter_user_budget
+  - intent: user_budget
+    entities:
+      - amt: "5000"
+  - slot_was_set:
+      - amt: "5000"
+  - action: utter_user_days
+  - intent: user_days
+    entities:
+      - number: "5"
+  - slot_was_set:
+      - number: "5"
+  - action: utter_check 
+  - action: utter_goodbye    
+  
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+ 

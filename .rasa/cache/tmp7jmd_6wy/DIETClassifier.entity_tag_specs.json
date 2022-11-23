@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-amt",
+      "2": "I-amt",
+      "3": "L-amt",
+      "4": "U-amt",
+      "5": "B-arive",
+      "6": "I-arive",
+      "7": "L-arive",
+      "8": "U-arive",
+      "9": "B-dep",
+      "10": "I-dep",
+      "11": "L-dep",
+      "12": "U-dep",
+      "13": "B-name",
+      "14": "I-name",
+      "15": "L-name",
+      "16": "U-name",
+      "17": "B-number",
+      "18": "I-number",
+      "19": "L-number",
+      "20": "U-number",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-amt": 1,
+      "I-amt": 2,
+      "L-amt": 3,
+      "U-amt": 4,
+      "B-arive": 5,
+      "I-arive": 6,
+      "L-arive": 7,
+      "U-arive": 8,
+      "B-dep": 9,
+      "I-dep": 10,
+      "L-dep": 11,
+      "U-dep": 12,
+      "B-name": 13,
+      "I-name": 14,
+      "L-name": 15,
+      "U-name": 16,
+      "B-number": 17,
+      "I-number": 18,
+      "L-number": 19,
+      "U-number": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

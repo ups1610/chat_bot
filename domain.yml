@@ -1,0 +1,112 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  # - deny
+  - mood_great
+  # - mood_unhappy
+  # - bot_challenge
+  - out_of_scope
+  - bot_name
+  - user_name:
+      use_entities:
+        - name
+  - user_departure:
+      use_entities:
+        - dep
+  - user_arival:
+      use_entities:
+        - arive
+  - user_days:
+      use_entities:
+        - number
+  - user_budget:
+      use_entities:
+        - amt
+
+
+entities:
+  - name
+  - dep
+  - arive
+  - amt
+  - number
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name  
+  number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: number
+
+  dep:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: dep
+
+  amt:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: amt
+
+  arive:
+    type: text 
+    mappings:
+    - type: from_entity
+      entity: arive     
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
+  utter_welcome:
+  - text: "Welcome to Pocket Guide.\n\nA Guide with Collaboration, Communication, and Choices.\n\nPocket Guide allows you to help with the following service:\n\n🚉- Static and Dynamic Packages\n\n✈- Books Flights, Trains, Cabs, and Buses\n\n🙏🏻- Hospitality and Hotels\n\n🚨- Security\n\n🪬- Traveling Guidance\n\nLets Go for a Quick Survey 😀 (Yes/No):"
+   
+  utter_out_of_scope:
+  - text: "Sorry 🙇‍♀ I didn't get what you said. Please rephrase."
+
+  utter_name:
+  - text: "What is your good name ☺️"
+  utter_user_dep:
+  - text: "Departure City (City Name)❓"
+  utter_user_arival:
+  - text: "Arrival City (City Name)❓"
+  utter_user_days:
+  - text: "How long you stay ⏳"
+  utter_user_budget:
+  - text: "Target Budget❓"
+
+  utter_check:
+  - text: "Thanks for the details."
+
+  utter_bot_name:
+  - text: "I am a Pocket Guide 🤖.Your Travel Agent.\n\nDeveloped by Dynamic coders."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
